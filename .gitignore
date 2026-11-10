@@ -1,0 +1,24 @@
+# Private keys and token artifacts
+*.pem
+*.key
+*.jwt
+*.token
+token.json
+
+# Local configuration and environments (retain the non-secret example)
+config.json
+*.local.json
+.env
+.env.*
+!.env.example
+!config.example.json
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Node dependencies and TypeScript outputs
+node_modules/
+agent-cli/dist/
+agent-cli/dist-test/

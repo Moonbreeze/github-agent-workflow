@@ -1,0 +1,22 @@
+{
+  "name": "github-agent-pr",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "github-agent-pr": "dist/bin.js"
+  },
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "cli": "node ./dist/bin.js",
+    "typecheck": "tsc --noEmit",
+    "build": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\" && tsc -p tsconfig.build.json && node -e \"const fs=require('node:fs'); fs.chmodSync('dist/bin.js', 0o755); fs.chmodSync('dist/askpass.js', 0o755)\"",
+    "test": "npm run build && tsc && node --test dist-test/test/*.test.js"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.9.0"
+  }
+}

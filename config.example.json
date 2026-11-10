@@ -1,0 +1,7 @@
+{
+  "app_id": 123456,
+  "installation_id": 12345678,
+  "expected_owner": "Moonbreeze",
+  "allowed_repositories": ["github-agent-workflow"],
+  "private_key_path": "/absolute/path/outside/git/github-app.private-key.pem"
+}
