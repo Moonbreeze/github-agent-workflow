@@ -99,3 +99,7 @@ rewrites are rejected before authentication. Push authentication accepts only
 the expected GitHub HTTPS username and password prompts.
 The CLI has exactly `prepare` and `publish`: **it has no merge capability and no
 arbitrary-command wrapper**. Review and merge remain human-controlled.
+
+See [Workflow assurance modes](docs/workflow-assurance.md) for the distinction
+between server-side enforcement and the accepted risks of trust-based use. The
+live pilot is still in progress.
