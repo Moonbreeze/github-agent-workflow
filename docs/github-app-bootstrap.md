@@ -157,9 +157,12 @@ push branches, create pull requests, or merge.
 
 With Node.js 24 or newer and Git installed, run `npm install` and `npm run
 build` in `agent-cli/`. The CLI uses the same documented configuration fields,
-fixed values, and credential security rules as the Python bootstrap. It has not
-yet been live-verified against GitHub; automated coverage is local/unit-level
-with mocked API interactions.
+fixed values, and credential security rules as the Python bootstrap. The public
+reference pilot completed successfully on 2026-11-10 through PR #1. The App bot
+authored and pushed the agent branch and opened the PR; the server-side ruleset
+rejected a direct `main` update; the owner independently approved; a later App
+commit dismissed the stale approval; and the owner re-approved and merged. The
+pilot did not use CI: the agreed local checks were visible in the PR body.
 
 ```sh
 npm run cli -- prepare --task TASK-SLUG [--config PATH]

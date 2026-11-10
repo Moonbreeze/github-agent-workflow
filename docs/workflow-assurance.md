@@ -10,7 +10,12 @@ server-side boundary. GitHub rejects direct pushes to the protected branch,
 requires changes to arrive through a pull request, and requires an independent
 review before merge.
 
-The public reference repository uses enforced mode for its live pilot.
+The public reference repository used enforced mode for its successful pilot,
+completed on 2026-11-10 through PR #1. The App bot authored and pushed the agent
+branch and opened the PR; the server-side ruleset rejected a direct `main`
+update; the owner independently approved; a later App commit dismissed the
+stale approval; and the owner re-approved and merged. The pilot did not use CI:
+the agreed local checks were visible in the PR body.
 
 ## Trust-based
 
@@ -38,4 +43,4 @@ The CLI currently provides these local safeguards:
 - does not persist the token in Git configuration or credential storage.
 
 These safeguards reduce accidental misuse but do not replace server-side
-enforcement. The live pilot is still in progress.
+enforcement.

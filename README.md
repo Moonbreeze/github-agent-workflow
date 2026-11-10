@@ -58,10 +58,9 @@ npm run build
 ```
 
 It uses the same documented configuration fields, fixed values, and credential
-security rules as the Python bootstrap. The TypeScript CLI has not yet been
-live-verified against GitHub; automated coverage is local/unit-level with
-mocked API interactions. From the configured, allowlisted repository, prepare
-a task branch:
+security rules as the Python bootstrap. The public reference pilot completed
+successfully on 2026-11-10 through PR #1. From the configured, allowlisted
+repository, prepare a task branch:
 
 ```sh
 npm run cli -- prepare --task issue-123 [--config PATH]
@@ -102,4 +101,8 @@ arbitrary-command wrapper**. Review and merge remain human-controlled.
 
 See [Workflow assurance modes](docs/workflow-assurance.md) for the distinction
 between server-side enforcement and the accepted risks of trust-based use. The
-live pilot is still in progress.
+pilot confirmed that the App bot authored and pushed the agent branch and
+opened the PR; the server-side ruleset rejected a direct `main` update; the
+owner independently approved; a later App commit dismissed the stale approval;
+and the owner re-approved and merged. The pilot did not use CI: the agreed
+local checks were recorded in the PR body.
