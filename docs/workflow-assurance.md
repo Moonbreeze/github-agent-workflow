@@ -10,6 +10,8 @@ server-side boundary. GitHub rejects direct pushes to the protected branch,
 requires changes to arrive through a pull request, and requires an independent
 review before merge.
 
+The public reference repository uses enforced mode for its live pilot.
+
 ## Trust-based
 
 For private repositories on GitHub Free where the required server-side
